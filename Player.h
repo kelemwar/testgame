@@ -1,14 +1,16 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#ifndef TESTGAME_PLAYER_H
-#define TESTGAME_PLAYER_H
+
 using namespace sf;
 using namespace std;
 
 class Player{
 
+private:
+    float x, y;
+
 public:
-    float x, y, w, h, dx, dy, speed ;
+    float w, h, dx, dy, speed ;
     int dir ;
     string file;
 //    String File;
@@ -44,6 +46,13 @@ public:
         speed = 0;
         sprite.setPosition(x,y);
     }
-};
 
-#endif //TESTGAME_PLAYER_H
+    float getpPlayerCoordinateX(){
+
+        return x;
+    }
+
+    float getpPlayerCoordinateY(){
+        return y;
+    }
+};
